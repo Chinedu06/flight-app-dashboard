@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.profile-section{
+  border-radius: 0 40px 0 0;
+}
+.prof-container{
+  position: relative;
+  z-index: 1;
+}
+.prof-container::after{
+  content: '';
+  width: 79px;
+  height: 79px;
+  background-color: rgb(61, 86, 84);
+  position: absolute;
+  top: 0;
+  border-radius: 100%;
+  right:1px;
+  z-index: 2;
+}
+.top-curve:nth-child(1) {
+  position: absolute;
+  top: -20px;
+  height: 20px;
+  width: 100%;
+  background-color: #e1eceb;
+}
+.top-curve:nth-child(1)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -16px;
+  height: 100%;
+  width: 100%;
+  background-color: #425c5a;
+  border-bottom-right-radius: 1.5rem;
+}
+.bottom-curve:nth-child(2) {
+  position: absolute;
+  bottom: -20px;
+  height: 20px;
+  width: 100%;
+  background-color: #e1eceb;
+}
+.bottom-curve:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -16px;
+  height: 100%;
+  width: 100%;
+  background-color: #425c5a;
+  border-top-right-radius: 1.5rem;
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
